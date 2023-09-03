@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-background: #F0F2F5;
+  --primary-gradient-text: linear-gradient(45deg, #09009f, #ff47d1 40%, #00ff95 80%);
+  --primary-gradient-bg: linear-gradient(120deg, #09009f, #00ff95 90%);
+  --dancing-script: 'Dancing Script';
+  --pacifico: 'Pacifico';
+  --great-vibes: 'Great Vibes';
+  --satisfy: 'Satisfy';
+  --oswald: 'Oswald';
+  --raleway: 'Raleway';
+}
+
+/* #00ff95 80% */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,9 +23,57 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--raleway);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.customBg {
+  background-color: var(--primary-background);
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #000000d1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.modal {
+  width: auto;
+  height: auto;
+  margin: auto;
+  border-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.learnMoreLink {
+  color: #385898;
+}
+
+.text-primaryGradient {
+  background: var(--primary-gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.vibeHeading {
+  font-family: var(--pacifico);
+}
+
+.bg-primaryGradient {
+  background: var(--primary-gradient-bg);
 }
